@@ -4,7 +4,7 @@
 
 import time
 import RPi.GPIO as GPIO
-from thermbuzz import buzz
+from buzzer import buzz
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP)
