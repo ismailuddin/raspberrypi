@@ -1,4 +1,5 @@
 raspberrypi
 ===========
 
-Electronics projects with Raspberry Pi
+***Contents
+Collection of various scripts (namely in Python) for use in Raspbery Pi projects.
