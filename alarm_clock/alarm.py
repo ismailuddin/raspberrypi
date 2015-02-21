@@ -24,7 +24,7 @@ try:
             curr_time = int(time.strftime("%H%M"))
 
             # Buzzes the buzzer when the time reaches the set alarm time
-            if timenow == alarm:
+            if curr_time == alarm:
                     buzz(10,0.5)
                     time.sleep(0.25)
                     buzz(20,0.5)
