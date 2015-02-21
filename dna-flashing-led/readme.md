@@ -16,3 +16,4 @@ Simply launch from the terminal in RPi using command `sudo python nu_blink.py f`
 
 
 ©2015, Ismail Uddin & Science Exposure. www.scienceexposure.com
+Link to project: http://www.scienceexposure.com/raspberry-pi/dna-flashing-led-box-raspberry-pi/
