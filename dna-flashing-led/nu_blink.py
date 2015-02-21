@@ -24,7 +24,7 @@ def blink(nucleotide):
 		pwmRed.start(100)
 		pwmGreen.start(0)
 		pwmBlue.start(100)
-			print('A (purple)')
+		print('A (purple)')
 	elif nucleotide == 'T':
 		pwmRed.start(0)
 		pwmGreen.start(0)
