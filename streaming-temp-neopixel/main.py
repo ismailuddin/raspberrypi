@@ -23,6 +23,7 @@ def reset():
 	for i in range(strip.numPixels()):
 		strip.setPixelColorRGB(i,0,0,0)
 
+# Function to calculate which colour and how many LEDs to light up
 def colour(temp):
 	if temp < 18:
 		reset()
@@ -53,8 +54,9 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	strip.begin()
 
-	print 'Press Ctrl-C to close the script.'
+	print 'Press Ctrl-C to end this script.'
 
+	# Plot.ly functions to stream temperature values online
 	if plotting == 'plotly':
 
 		import plotly.plotly as py
@@ -75,17 +77,19 @@ if __name__ == '__main__':
 			
 		}], filename='RPi streaming temperature')
 
-		print("View your streaming graph here:", url)
+		print("Link to Plot.ly online graph:", url)
 
 		stream = py.Stream(plotly_user_config['plotly_streaming_tokens'][0])
 		stream.open()
+	else:
+		pass
 
 	while True:
 		t = temp_from_r(read_resistance())
-		print(t)
+		print(t)	# Prints temperature values in real time
 		colour(t)
 		if plotting == 'plotly':
 			stream.write({'x': datetime.datetime.now(), 'y':t})		
 		else:
 			pass
-		time.sleep(0.25)
+		time.sleep(0.25)	# Time interval for taking readings in seconds
