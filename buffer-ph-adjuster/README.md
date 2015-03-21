@@ -11,3 +11,4 @@ The `calibrate.py` code is run once a day for calibrating the pH meter, and the 
 * Monk Makes 'RaspiRobot board' API (https://github.com/simonmonk/raspirobotboard2)
 
 ## Running the code
+Type `sudo python calibrate.py` to run the calibration code, and `sudo python buffer-ph.py` to run the main code. For more details, see the 'Buffer pH adjuster' tutorial at www.scienceexposure.com
