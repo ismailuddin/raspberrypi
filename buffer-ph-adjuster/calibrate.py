@@ -25,17 +25,44 @@ def ph_reading():
 		line = line + data
 	return ph_value
 
+
+curr_ph = ph_reading()
+
 # Calibrating at pH 4
 try:
 	curr_ph = ph_reading()
 	ser.write("cal,low,4\r")
-	while True:
+	while curr_pH != 4:
 		try:
 			time.sleep(0.5)
 			print("Current pH: %s" % curr_ph)
-		except:
+		finally:
 			pass
-except:
+finally:
 	pass
 
+# Calibrating at pH 7
+try:
+	curr_ph = ph_reading()
+	ser.write("cal,mid,7\r")
+	while curr_pH != 7:
+		try:
+			time.sleep(0.5)
+			print("Current pH: %s" % curr_ph)
+		finally:
+			pass
+finally:
+	pass
 
+# Calibrating at pH 10
+try:
+	curr_ph = ph_reading()
+	ser.write("cal,high,10\r")
+	while curr_pH != 10:
+		try:
+			time.sleep(0.5)
+			print("Current pH: %s" % curr_ph)
+		finally:
+			pass
+finally:
+	pass
