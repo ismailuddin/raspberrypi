@@ -10,4 +10,4 @@ This script allows you to display live London Underground line's status on a Neo
 * 5 V power supply (you may borrow from a Arduino board)
 
 ## Usage
-To run the script, type `sudo python underground-status.py` at the terminal. To cycle between the London Underground lines, press the push button.
+To run the script, type `sudo python underground_status.py` at the terminal. To cycle between the London Underground lines, press the push button.
