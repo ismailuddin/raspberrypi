@@ -1,6 +1,6 @@
 # London Underground Line status - Adafruit Neopixel
-
-This script allows you to display live London Underground line's status on a Neopixel LED ring using a Raspberry Pi. For more information on setting up this project, visit scienceexposure.com
+![London Underground Line status using Neopixels](http://www.scienceexposure.com/wp-content/uploads/2015/07/DSC5152-1024x686.jpg)
+This script allows you to display live London Underground line's status on a Neopixel LED ring using a Raspberry Pi. For more information on setting up this project, visit <http://www.scienceexposure.com/>
 
 ## Requirements
 * Raspberry Pi (any model will do)
