@@ -93,7 +93,7 @@ if __name__ == '__main__':
 	line_names = linestatus_dict.keys()
 	curr_line = line_names[0]
 	neopixel_status(curr_line)
-	print curr_line
+	
 	try:
 		while True:
 			if GPIO.input(switchPin) == 0:
