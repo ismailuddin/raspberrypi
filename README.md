@@ -1,5 +1,4 @@
-raspberrypi
+Raspberry Pi related projects
 ===========
 
-#Contents
-Collection of various scripts (namely in Python) for use in Raspbery Pi projects.
+A collection of Python 2-based Raspberry Pi code projects, accompanying tutorials at www.scienceexposure.com
