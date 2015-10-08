@@ -12,7 +12,7 @@ bSC = sys.argv[1]
 #                 RS,EN,D4,D5,D6,D7,Co,Ro,BL
 RPi_PIN_config = [27,22,25,24,23,18,16, 2, 4]
 
-if  sys.argv[1] == "i2c":
+if  sys.argv[2] == "i2c":
 	lcd = LCD.Adafruit_CharLCDPlate()
 else:
 	lcd = LCD.Adafruit_CharLCD(*RPi_PIN_config)
