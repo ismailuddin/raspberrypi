@@ -94,7 +94,7 @@ def mainLoop():
 			strip.setBrightness(25)
 			updateNeopixels(timerValue, [0,255,0])
 			print("Started loop")
-			time.sleep(timerValue * 10)
+			time.sleep(timerValue * 60)
 			print("Stuck in loop")
 			alarmAnimation()
 			alarmMode = True
