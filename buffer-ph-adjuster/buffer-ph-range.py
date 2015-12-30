@@ -19,12 +19,13 @@ ser = serial.Serial(usbport,9600)
 # Initialize RaspiRobot board
 rr = RRB2()
 
-# pH meter readings
-line = ""
+
 
 pH_range = range(pH_range_lower, pH_range_upper)
 
 def ph_reading():
+	# pH meter readings
+	line = ""
 	data = ser.read()
 	if data == "/r":
 		ph_value = float(line)
