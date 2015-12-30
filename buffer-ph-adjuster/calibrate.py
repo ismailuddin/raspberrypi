@@ -14,9 +14,10 @@ usbport = '/dev/ttyAMA0'
 ser = serial.Serial(usbport,9600)
 
 # pH meter readings
-line = ""
+
 
 def ph_reading():
+	line = ""
 	data = ser.read()
 	if data == "/r":
 		ph_value = float(line)
