@@ -11,15 +11,18 @@ bSC = sys.argv[1]
 
 #                 RS,EN,D4,D5,D6,D7,Co,Ro,BL
 RPi_PIN_config = [27,22,25,24,23,18,16, 2, 4]
-
-if  sys.argv[2] == "i2c":
-	lcd = LCD.Adafruit_CharLCDPlate()
-else:
+try:
+	if  sys.argv[2] == "i2c":
+		lcd = LCD.Adafruit_CharLCDPlate()
+	else:
+		lcd = LCD.Adafruit_CharLCD(*RPi_PIN_config)
+except IndexError:
 	lcd = LCD.Adafruit_CharLCD(*RPi_PIN_config)
 	
 lcd.clear()
 
 lcd.message('Initialising...')
+print('Initialising...')
 lcd.show_cursor(True)
 lcd.blink(True)
 tfl = TfLBusArrivalsAPI()
@@ -27,6 +30,7 @@ tfl = TfLBusArrivalsAPI()
 
 lcd.clear()
 lcd.message('Fetching TfL bus\narrivals...')
+print('Fetching TfL bus\narrivals...')
 lcd.blink(True)
 
 def fetchBusArrivals():
@@ -59,6 +63,7 @@ while True:
 		lcd.clear()
 		tickerInfo = '%s to %s \nin %.0f minutes' % (bus[0], bus[1], bus[2])
 		lcd.message(tickerInfo)
+		print(tickerInfo)
 		time.sleep(3)
 		for i in range(16):
 			time.sleep(0.1)
