@@ -14,8 +14,8 @@ class TfLBusArrivalsAPI:
 		with open('data/tfl-bus-stops.csv') as csvfile:
 		    reader = csv.reader(csvfile,delimiter=',')
 		    for row in reader:
-		        self.naptanDict[row[3]] = str(row[2])
-		        self.busStopDict[row[1]] = str(row[2])
+		        self.naptanDict[str(row[3])] = str(row[2])
+		        self.busStopDict[str(row[1])] = str(row[2])
 
 	def searchBusStop(self, queryString):
 		"""
@@ -57,7 +57,7 @@ class TfLBusArrivalsAPI:
 		except KeyError:
 			try:
 		  		busStopCode = str(kwargs['bus_stop_code'])
-		  		naptanID = self.busStopDict[busStopCode]
+		  		naptanID = self.busStopDict[str(busStopCode)]
 			except KeyError:
 				print("You have not specified a bus stop code (bus_stop_code='1234' or Naptan ID (naptan_id='4905N')")
 
