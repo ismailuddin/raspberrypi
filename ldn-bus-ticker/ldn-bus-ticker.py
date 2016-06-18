@@ -1,4 +1,4 @@
-# TfL Bus arrivals ticker
+# London Bus arrivals ticker
 # Ismail Uddin, 2015
 # www.scienceexposure.com
 
